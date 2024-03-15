@@ -1,0 +1,152 @@
+.logo.float_left img {
+    height: 65px !important;
+    margin-top: -11px !important;
+}
+
+.logo.float_left {
+    height: 49px !important;
+    margin-top: 3px !important;
+}
+
+header .search_option .search {
+    margin-top: 12px !important;
+}
+
+img.serviceicon {
+    margin: auto;
+    margin-top: 15px !important;
+}
+
+a.border_round.tran3s {
+    height: 29px;
+    padding-top: 8px;
+}
+.mapAddress .contactUs_address .single_address .text {
+
+    width: 87%;
+}
+@media (max-width: 400px) {
+    .logo.float_left {
+        height: 64px !important;
+        /*margin-top: 16px !important;*/
+    }
+    header .logo {
+        margin-top: 15px !important;
+    }
+}
+
+.carousel-caption {
+    padding-bottom: 251px;
+    top: 162px;
+    text-align: left;
+    left: 171px;
+}
+
+.tp-caption.tp-resizeme.rs-parallaxlevel-2 {
+    /* position: inherit; */
+    margin-top: 100px;
+}
+
+.tp-caption.tp-resizeme.rs-parallaxlevel-2.conbtn {
+    margin-top: 163px;
+}
+
+#banner a {
+    background: none;
+    border: none;
+}
+ul.p_color_bg.dropdown-menu li a:hover {
+    background: white !important;
+    color: black !important;
+}
+header nav.navbar-default .nav>li a:focus {
+    color: #00cbd8 !important;
+}
+
+footer .main_footer {
+    padding-bottom: 0 !important;
+    padding-top: 55px !important;
+    background: rgba(32,44,50,0.97);
+}
+#banner h1 span {
+    font-weight: 300;
+    font-size: 20px !important;
+    text-transform: capitalize;
+    /* font-family: revert; */
+}
+
+#banner h1 {
+    line-height: 48px;
+    font-size: 30px !important;
+    text-transform: uppercase;
+}
+#banner p {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 28px;
+    color: #7d7d7d;
+    width: 83% !important;
+}
+@media (max-width: 449px) {
+    .item.active img,
+    .item img {
+        height: 398px;
+    }
+    .carousel-caption {
+    padding-bottom: 0;
+    top: auto;
+    text-align: left;
+    left: 10px;
+    background-blend-mode: 0;
+    end: 0;
+    bottom: 32px;
+}
+
+#banner h1 {
+    line-height: 22px;
+    font-size: 12px !important;
+    text-transform: uppercase;
+}
+#banner p {
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 18px;
+    color: #000000;
+    width: 100% !important;
+    font-family: inherit;
+}
+#banner h1 span {
+    font-weight: 300;
+    font-size: 15px !important;
+    text-transform: capitalize;
+    line-height: 25px;
+    /* font-family: revert; */
+    /* margin-top: 23px !important; */
+}
+.tp-caption.tp-resizeme.rs-parallaxlevel-2 {
+    /* position: inherit; */
+    margin-top: 90px;
+}
+#banner .tp-caption {
+    display: block;
+}
+.tp-caption {
+    position: unset;
+}
+
+#banner .tp-caption {
+    margin: 5px 0 !important;
+}
+.logo.float_left img {
+    height: 44px !important;
+    margin-top: 0 !important;
+}
+div#google-map iframe {
+    width: 100% !important;
+        height: 388px !important;
+}
+.mapAddress .contactUs_address .single_address .text {
+
+    width: 100%;
+}
+}

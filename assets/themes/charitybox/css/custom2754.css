@@ -1,0 +1,344 @@
+.main-page-wrapper{
+	overflow:hidden;
+}
+.admin-bar .main-menu.fixed,
+.admin-bar .main-menu .search-form{
+	top:32px;
+}
+.wpb_button, .wpb_content_element, ul.wpb_thumbnails-fluid > li{
+	margin-bottom:0px !important;
+}
+.get-in-touch form .p-color-bg.hvr-bounce-to-right{
+	display:inline-block;
+	position:relative;
+}
+.get-in-touch form .hvr-bounce-to-right input {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    display: inline-block;
+    margin: 0;
+	color: #fff;
+    font-weight: 600;
+    line-height: 45px;
+    text-transform: uppercase;
+	padding:0px 15px;
+	border:none;
+}
+.get-in-touch form .hvr-bounce-to-right .ajax-loader {
+    position: absolute;
+    right: -30px;
+    top: 0;
+}
+.gallery-page.gallery-v2{
+	margin:100px 0 62px;
+}
+.gallery-page.gallery-v2 .single-img-wrapper img{
+	width:100%;
+}
+.faq-page,
+.our-blog.m-fix,.our-blog.blog-v3,.margin-fix,
+.event-single-page.up-coming-events{
+	margin-top:95px;
+}
+.our-blog .post-small .post{
+	min-height:170px;
+}
+/*************Event Tribe***************/
+.tribe-events-event-meta .column, .tribe-events-event-meta .tribe-events-meta-group{
+	width:50%;
+}
+.event-details-page .event-schedule .tribe-events-meta-group li {
+    color: #333333;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 0 15px 14px 0;
+}
+.event-details-page .event-schedule .tribe-events-meta-group li .tribe-events-abbr{
+    color: #6f6f6f;
+    font-size: 13px;
+    font-weight: normal;
+}
+.event-details-page .event-schedule .tribe-events-meta-group li a{
+	color:#cd2122;
+	font-size: 15px;
+}
+#tribe-events .tribe-events-button, .tribe-events-button{
+	background:#cd2122;
+	padding: 12px 15px;
+	margin-bottom:20px;
+}
+#tribe-events .tribe-events-button:hover, .tribe-events-button:hover{
+	background:#333333;
+}
+#tribe-events-footer .post-control a{
+	background:#cd2122;
+	width:40px;
+	height:40px;
+	line-height:40px;
+	color:#ffffff;
+}
+.our-blog .post-large .img img,
+.blog-details-page .blog-content > img{
+	width:100%;
+}
+.blog-details-page .blog-date .post-info li a{
+	color: #6f6f6f;
+    font-family: "Open Sans",sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    letter-spacing: 0.25px;
+	text-transform: capitalize;
+}
+.blog-details-page .blog-content h6.reply-title{
+	margin:0px !important;
+}
+.blog-details-page .blog-content p a{
+	color:#cd2122;
+}
+/*** 
+
+====================================================================
+	Comments Area
+====================================================================
+
+ ***/
+
+.blog-details-page .comments-area{
+	position:relative;
+	margin-top:50px;	
+}
+
+.blog-details-page .comments-area .comment-box{
+	position:relative;	
+}
+
+.blog-details-page .comments-area .comment{
+	position:relative;
+	margin:50px 0px 0px 0px;
+	padding:0px 0px 10px 110px;	
+}
+
+.blog-details-page .comments-area .reply-comment{
+	margin-left:50px;	
+}
+
+.blog-details-page .comments-area .comment-box .author-thumb{
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:84px;
+	height:84px;
+	border:3px solid #ffffff;
+	border-radius:5px;
+	-moz-box-shadow:0px 0px 2px 0px #000000;
+	-ms-box-shadow:0px 0px 2px 0px #000000;
+	-o-box-shadow:0px 0px 2px 0px #000000;
+	-webkit-box-shadow:0px 0px 2px 0px #000000;
+	box-shadow:0px 0px 2px 0px #000000;
+}
+
+.blog-details-page .comments-area .comment-box .author-thumb img{
+	width:100%;
+	display:block;
+	border-radius:5px;
+}
+
+.blog-details-page .comments-area .comment-info{
+	margin-bottom:10px;
+	color:#bcbcbc;
+	font-size:15px;
+	font-family: "Open Sans",sans-serif;	
+}
+
+.blog-details-page .comments-area .comment-box strong{
+	color:#1a1a1a;
+	font-weight:700;
+	text-transform:uppercase;
+}
+
+.blog-details-page .comments-area .reply-btn{
+	position:absolute;
+	right:0px;
+	top:0px;
+	font-family: "Open Sans",sans-serif;
+	color:#ffffff;
+	padding:5px 20px;
+	line-height:24px;
+	background:#000;
+	border-radius:3px;
+	font-weight:600;
+	text-transform:uppercase;		
+}
+.blog-details-page .comments-area .reply-btn a{
+	font-family: "Open Sans",sans-serif;
+	color:#ffffff;
+	font-weight:400;
+	text-transform:uppercase;		
+}
+
+.blog-details-page .comments-area .reply-btn:hover{
+	background-color:#cd2122;	
+}
+.blog-details-page .comments-area .default-form{
+	margin-top:40px;
+}
+.blog-details-page .comments-area .default-form .reply-title{
+	font-size:16px;
+	margin:10px 0 !important;
+}
+.blog-details-page .comments-area .default-form .reply-title a,
+.default-form a{
+	color:#cd2122;
+}
+/*************Custom Css*************/
+.widget {
+    background: #f4f4f4 none repeat scroll 0 0;
+}
+.widget.widget_categories{
+	padding: 49px 20px 45px;
+	margin-bottom:60px;
+}
+.widget.widget_categories h6{
+	margin-bottom:16px;
+}
+.widget ul li {
+    line-height: 38px;
+	position:relative;
+}
+.widget ul li:after{
+	position:absolute;
+	top:0;
+	left:0;
+	content: "";
+	font-family: FontAwesome;
+	font-size: 16px;
+}
+.widget ul li a {
+    color: #6f6f6f;
+    font-weight: normal;
+    text-transform: none;
+	padding-left:30px;
+}
+.sidebar-content.help-wedgit ul li:after{
+	display:none;
+}
+.sidebar-content.help-wedgit ul li a{
+	padding-left:0px;
+}
+.widget .post-wrapper .post-detail,
+.sidebar .sidebar-recent-post .post-wrapper{
+	position:relative;
+}
+.widget .post-wrapper .post-detail{
+	min-height:78px;
+}
+.widget .post-wrapper .thumb-img{
+	position:absolute;
+	top:0;
+	left:0px;
+	width:79px;
+	height:78px;
+}
+.widget .post-wrapper .thumb-img img{
+	width:100%;
+	display:block;
+	height:78px;
+}
+.widget .post-wrapper .post-info{
+	position:relative;
+	padding-left:90px;
+}
+.widget .donate-slider .item span{
+	display:inline-block !important;
+}
+.widget .donate-slider .item span .amount{
+	color:#cd2122 !important;
+}
+.page_pagination .pagination li{
+	margin-right:1px;
+	display:inline-block;
+}
+.page_pagination .pagination li a,
+.page_pagination .pagination li > span{
+	background:#000000;
+	color:#ffffff;
+	font-size:14px;
+	width:40px;
+	height:40px;
+	line-height:40px;
+	text-align:center;
+	border-radius:0;
+	padding:0px;
+	transition:all 300ms ease-in;
+	-moz-transition:all 300ms ease-in;
+	-ms-transition:all 300ms ease-in;
+	-o-transition:all 300ms ease-in;
+	-webkit-transition:all 300ms ease-in;
+	border:none;
+}
+.page_pagination .pagination li a:hover,
+.page_pagination .pagination li > span{
+	background:#cd2122;
+	color:#ffffff;
+}
+.blog-details-page{
+	margin-bottom:50px;
+}
+
+/**************Charitable Single*************/
+.single-campaign .blog-details-page{
+	margin:95px 0 60px;
+}
+.single-campaign .blog-details-page .campaign-description{
+	line-height: 30px;
+    margin: 27px 0 30px;
+	color: #6f6f6f;
+    font-family: "Open Sans",sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    letter-spacing: 0.25px;
+}
+.campaign-summary .campaign-summary-item{
+	width:47%;
+	margin:0 15px;
+}
+.campaign-summary .campaign-donation{
+	padding:0px;
+	margin:25px 15px;
+	text-align:left;
+}
+.campaign-summary .campaign-figures .amount, .campaign-summary .campaign-raised .amount,.campaign-summary .donors-count{
+	color:#cd2122;
+}
+.campaign-progress-bar .bar, .donate-button, #charitable-donation-form .donation-amount.selected, #charitable-donation-amount-form .donation-amount.selected{
+	background:#cd2122 !important;
+}
+.single-tribe_events .widget .donate-slider .item p{
+	margin-bottom:20px !important;
+}
+.widget.widget_bunch_donation_slider{
+	background:none;
+}
+#charitable-donation-form{
+	margin-bottom:70px;
+}
+.charitable-fieldset .charitable-form-fields.cf .charitable-form-field{
+	width:47%;
+	margin:0 15px;
+	float:left;
+}
+.sidebar .help-wedgit .opacity{
+	padding-left:35px;
+}
+.inner-banner .opacity ul li a{
+	position:relative;
+	padding-right: 17px;
+}
+.inner-banner .opacity ul li a:after{
+	position:absolute;
+	right:0;
+	top:0;
+	content:"/";
+	color:#ffffff;
+	font-family: "Open Sans",sans-serif;
+    font-size: 14px;
+}
