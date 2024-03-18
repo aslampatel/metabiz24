@@ -24,8 +24,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-// $config['base_url'] = 'http://localhost/mlm/';
-$config['base_url'] = 'https://lalimbic.co.uk/mlm/';
+$config['base_url'] = 'http://localhost/metabiz24/';
+// $config['base_url'] = 'https://lalimbic.co.uk/mlm/';
 /*
 |--------------------------------------------------------------------------
 | Index File

@@ -25,7 +25,7 @@ class Profile extends CI_Controller
 
 		//=========================Vendor Section================================	
 	}
-	function dashboard()
+	function dashboardold()
 	{
 		$uid = $this->session->userdata('is_userlogged_id');
 		$query = $this->Generalmodel->show_data_id('user_register', $uid, 'id', 'get', '');
@@ -80,23 +80,78 @@ class Profile extends CI_Controller
 		$this->load->view('dashboard', $data);
 		$this->load->view('common/footer', $data);
 	}
+
+	function dashboard()
+	{
+		$uid = $this->session->userdata('is_userlogged_id');
+		$query = $this->Generalmodel->show_data_id('user_register', $uid, 'id', 'get', '');
+
+		$data['directs'] = totalDirects($query[0]->id);
+		$data['rank'] = getRank($query[0]->id);
+		$data['club'] = getClub($query[0]->id);
+		$data['totalTeams'] = totalTeams($query[0]->id,0); //exit;
+        //
+		$DebitsTotal = $this->Generalmodel->get_total_3('amount', 'wallet', 'user_id', $query[0]->id, 'type', 'Debit','action','0');
+		$CreditsTotal = $this->Generalmodel->get_total_3('amount', 'wallet', 'user_id', $query[0]->id, 'type', 'Credit','action','0');
+		$totalIncome = $data['totalIncome'] = ($CreditsTotal[0]->amount - $DebitsTotal[0]->amount);
+
+		$data['rankIncome']  = $this->Generalmodel->get_total_3('amount', 'wallet', 'user_id', $query[0]->id, 'type', 'Credit','transaction_type','Rank')[0]->amount; 
+		//$data['clubIncome'] = $this->Generalmodel->get_total_3('amount', 'wallet', 'user_id', $query[0]->id, 'type', 'Credit','transaction_type','Club')[0]->amount; 
+	    $data['clubIncome'] = $this->Generalmodel->get_total('amount', 'wallet', ['user_id'=> $query[0]->id, 'type'=> 'Credit','transaction_type'=>'Club'])[0]->amount; 
+		$data['directIncome'] = $this->Generalmodel->get_total_3('amount', 'wallet', 'user_id', $query[0]->id, 'type', 'Credit','transaction_type','Direct')[0]->amount; 
+		$data['lavelIncome'] = $this->Generalmodel->get_total_3('amount', 'wallet', 'user_id', $query[0]->id, 'type', 'Credit','transaction_type','Lavel')[0]->amount; 
+		//  $totalIncome = 2300;
+		if($totalIncome >= 100){
+			$withdrawalAmount = $totalIncome - 500;
+			$s = $withdrawalAmount / 500;
+			$withdrawalLastAmount = intval($s) * 500;
+		}else{
+			$withdrawalLastAmount = 00;
+		}
+		$data['withdrawable'] = $withdrawalLastAmount; 
+		$data['news'] =  $this->Generalmodel->show_data_id_order('news', 'Active', 'status','desc','id', 'get', '');
+		$data['dashboard'] = $query;
+		$data['title'] = "Dashboard";
+		$this->load->view('dashboard/include/header', $data);
+		$this->load->view('dashboard/include/sidebar', $data);
+		$this->load->view('dashboard/dashboard', $data);
+		$this->load->view('dashboard/include/footer', $data);
+	}
+
 	// function with($totalIncome){
 	// 	if($totalIncome <)
 	// }
 
-	function team()
+	function teamold()
 	{
 		$uid = $this->session->userdata('is_userlogged_id');
 		$query = $this->Generalmodel->show_data_id('user_register', $uid, 'id', 'get', '');
-	$totalTeamsUser =	$data['totalTeamsUser'] = totalTeamsUser($query[0]->id,'');
-// 	prx(array_unique($totalTeamsUser));
+		$totalTeamsUser =	$data['totalTeamsUser'] = totalTeamsUser($query[0]->id,'');
+		//prx(array_unique($totalTeamsUser));
 		$data['dashboard'] = $query;
 		$data['title'] = "Profile";
 		$this->load->view('common/header', $data);
 		$this->load->view('team', $data);
 		$this->load->view('common/footer', $data);
 	} 
-	function profile()
+
+	
+
+	function team()
+	{
+		$uid = $this->session->userdata('is_userlogged_id');
+		$query = $this->Generalmodel->show_data_id('user_register', $uid, 'id', 'get', '');
+		$totalTeamsUser =	$data['totalTeamsUser'] = totalTeamsUser($query[0]->id,'');
+		//prx(array_unique($totalTeamsUser));
+		$data['dashboard'] = $query;
+		$data['title'] = "Profile";
+		$this->load->view('dashboard/include/header', $data);
+		$this->load->view('dashboard/include/sidebar', $data);
+		$this->load->view('dashboard/team', $data);
+		$this->load->view('dashboard/include/footer', $data);
+	} 
+
+	function profileold()
 	{
 		$uid = $this->session->userdata('is_userlogged_id');
 		$query = $this->Generalmodel->show_data_id('user_register', $uid, 'id', 'get', '');
@@ -108,7 +163,25 @@ class Profile extends CI_Controller
 		$this->load->view('common/footer', $data);
 	}
 
-	function editprofile()
+	
+	function profile()
+	{
+		$uid = $this->session->userdata('is_userlogged_id');
+		$query = $this->Generalmodel->show_data_id('user_register', $uid, 'id', 'get', '');
+		// print_r($query);exit;
+		$data['dashboard'] = $query;
+		$data['title'] = "Profile";
+		// $this->load->view('common/header', $data);
+		// $this->load->view('profile_view', $data);
+		// $this->load->view('common/footer', $data);
+
+		$this->load->view('dashboard/include/header', $data);
+		$this->load->view('dashboard/include/sidebar', $data);
+		$this->load->view('dashboard/profile', $data);
+		$this->load->view('dashboard/include/footer', $data);
+	}
+
+	function editprofileold()
 	{
 
 		$uid = $this->session->userdata('is_userlogged_id');
@@ -119,8 +192,22 @@ class Profile extends CI_Controller
 		$this->load->view('profile_edit', $data);
 		$this->load->view('common/footer', $data);
 	}
+	
 
-	function changepassword()
+	function editprofile()
+	{
+
+		$uid = $this->session->userdata('is_userlogged_id');
+		$query = $this->Generalmodel->show_data_id('user_register', $uid, 'id', 'get', '');
+		$data['dashboard'] = $query;
+		$data['title'] = "User Dashboard";
+		$this->load->view('dashboard/include/header', $data);
+		$this->load->view('dashboard/include/sidebar', $data);
+		$this->load->view('dashboard/edit-profile', $data);
+		$this->load->view('dashboard/include/footer', $data);
+	}
+
+	function changepasswordold()
 	{
 		$uid = $this->session->userdata('is_userlogged_id');
 		$query = $this->Generalmodel->show_data_id('user_register', $uid, 'id', 'get', '');
@@ -130,6 +217,22 @@ class Profile extends CI_Controller
 		$this->load->view('common/header', $data);
 		$this->load->view('change_pass', $data);
 		$this->load->view('common/footer', $data);
+	}
+
+
+	
+
+	function changepassword()
+	{
+		$uid = $this->session->userdata('is_userlogged_id');
+		$query = $this->Generalmodel->show_data_id('user_register', $uid, 'id', 'get', '');
+		$data['dashboard'] = $query;
+
+		$data['title'] = "Change Password";
+		$this->load->view('dashboard/include/header', $data);
+		$this->load->view('dashboard/include/sidebar', $data);
+		$this->load->view('dashboard/change-password', $data);
+		$this->load->view('dashboard/include/footer', $data);
 	}
 
 	function reset_pass()
@@ -185,14 +288,15 @@ class Profile extends CI_Controller
 				'ref_code' => $this->input->post('ref_code'),
 				'spon_code' => $this->input->post('spon_code'),
 				'account_holder_name' => $this->input->post('account_holder_name'),
-				'IFSC_code' => $this->input->post('IFSC_code'),
+				'ifsc_code' => $this->input->post('ifsc_code'),
 				'bank_name' => $this->input->post('bank_name'),
 				'account_number' => $this->input->post('account_number'),
 				'branch_name' => $this->input->post('branch_name')
 
 			);
-			//echo "<pre/>";	print_r ($data); exit();	
+			
 		}
+		//echo "<pre/>";	print_r ($data); exit();	
 		$query = $this->Generalmodel->show_data_id('user_register', $uid, 'id', 'update', $data);
 		//echo $this->db->last_query(); exit();
 		$data['title'] = "User Edit";

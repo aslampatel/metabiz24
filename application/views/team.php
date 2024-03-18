@@ -1,11 +1,11 @@
 <style>
 	.tree ul {
-  padding-top: 20px;
-  position: relative;
-  transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-}
+        padding-top: 20px;
+        position: relative;
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+    }
 
 .tree li {
   float: left;
@@ -176,22 +176,6 @@
                         	  <li>
                         		<div><?=$dashboard[0]->name; ?></div>
                         		<?=$totalTeamsUser; ?>
-                        		<!--<ul>-->
-                        		<!--  <li>-->
-                        		<!--	<div><input type="checkbox"> Sub-1</div>-->
-                        		<!--  </li>-->
-                        		<!--  <li>-->
-                        		<!--	<div><input type="checkbox"> Sub-2</div>-->
-                        		<!--	<ul>-->
-                        		<!--	  <li>-->
-                        		<!--		<div><input type="checkbox"> Sub-2-1</div>-->
-                        		<!--	  </li>-->
-                        		<!--	  <li>-->
-                        		<!--		<div><input type="checkbox"> Sub-2-2</div>-->
-                        		<!--	  </li>-->
-                        		<!--	</ul>-->
-                        		<!--  </li>-->
-                        		<!--</ul>-->
                         	  </li>
                         	</ul>
                           </div>

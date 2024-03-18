@@ -232,7 +232,7 @@ section#splide01 {
         <strong> <?php echo $this->session->flashdata('email_sent'); ?></strong>
     </div>
 <?php } ?>
-<!--col-12"-->
+<!--col-12"--> 
 <div class="col-12">
     <div class="news text-center text-dark">
         <section class="splide" aria-label="">
@@ -266,7 +266,7 @@ section#splide01 {
                                             <div class="text text-right"><?php echo $dashboard[0]->name ?></div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> 
                                 <div class="col-6">
                                     <div class="card nameBg">
                                         <div class="card-body text-right ">

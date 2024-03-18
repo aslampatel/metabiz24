@@ -85,8 +85,8 @@ $db['default'] = array(
 	'database' => 'lalimbicco_mlm', */
 
 	'username' => 'root',
-	'password' => 'Root@123456',
-	'database' => 'lalimbicco_mlm',
+	'password' => '',
+	'database' => 'metabiz24',
 
 
 	'dbdriver' => 'mysqli',
